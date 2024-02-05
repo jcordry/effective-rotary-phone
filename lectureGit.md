@@ -34,13 +34,13 @@ Source: atlassian.com
 
 ---
 
-![source: xkvd](xkvd.jpg)
-
----
-
 ## Git
 
 ![Git](Git-logo.png)
+
+---
+
+![source: xkvd](xkvd.jpg)
 
 ---
 
