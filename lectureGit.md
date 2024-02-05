@@ -117,7 +117,7 @@ There are alternatives to Git. There are alternatives to Github.
 4. **Stage** the files you want to include in your commit.
 5. **Commit** with a useful message. Your changes will be local only.
 6. **Pull** the changes others will have done from the remote.
-7. **Push** your changes into the remote. You can choose which branch of the 8
+7. **Push** your changes into the remote. You can choose which branch of the
    remote this new commit will go into.
 9. Repeat from step 2.
 
