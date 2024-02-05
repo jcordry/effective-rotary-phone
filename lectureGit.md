@@ -72,7 +72,8 @@ There are alternatives to Git. There are alternatives to Github.
 
 ## More definitions
 
-- **Checking out**: switching to a specific branch or commit.
+- **Checking out**: switching to a specific branch or commit. Further commits will happen in this
+  particular branch (independently from the rest of the development).
 - **Merging**: resolving the differences between two branches:
   1. Checkout the branch that you want to receive the changes,
   2. You merge the branch that contains the changes.
@@ -88,9 +89,8 @@ There are alternatives to Git. There are alternatives to Github.
 - **pull**, **fetch**: get the latest changes from the remote.
 - **push**: share the local changes with the remote.
 - **stage**, **add**: make a list of files to be committed.
-- **commit**: make a snapshot of the current project.
-- **branch**: a labelled commit. Further commits will happen in this
-  particular branch (independently from the rest of the development).
+- **commit**: make a snapshot of the current project. Requires a comment.
+  E.g.: "level 10, final version"
 
 ---
 
@@ -108,11 +108,9 @@ There are alternatives to Git. There are alternatives to Github.
 
 ##  Typical workflow
 
-Agile!
-
 1. **Clone** the project from a remote. This gives us a local working copy of
    the project. You only need to do that if you don't already have a local
-   working copy of the project. Checkout a branch.
+   working copy of the project.
 2. **Checkout** a branch and **pull** all the data from the remote or create a
    new one.
 3. Start your work on it. I.e.: add some files or modify existing files.
@@ -122,8 +120,6 @@ Agile!
 7. **Push** your changes into the remote. You can choose which branch of the 8
    remote this new commit will go into.
 9. Repeat from step 2.
-
-Be VERY mindful of the branch over which you are working.
 
 ## Why would you want to branch?
 
@@ -138,10 +134,9 @@ going to change the other branches.
   subset of your team mates.
 - Eventually merge your changes back to a shared branch.
 - Keep track of your releases.
+- Branching is lightweight and fast.
 
-Branching is lightweight and fast.
-
-> Branch early. Branch frequently.
+# Branch early. Branch frequently.
 
 
 ---
@@ -151,7 +146,7 @@ Branching is lightweight and fast.
 Remember that **to checkout a branch** means to switch to a different branch
 than the one we are currently working on.
 
-### Why do I need to branch?
+### Why do I need a branch?
 
 - You can also **checkout** a **commit**. Commits are identified by a hex
   value.
@@ -162,7 +157,7 @@ than the one we are currently working on.
 - If you then make more commits, those commits will be difficult to identify
   and get to, because there is no branch there.
 
-Don't detach your `HEAD`.
+# Don't detach your `HEAD`.
 
 ---
 
@@ -187,10 +182,10 @@ Suppose the following scenario:
 Now, we have a problem.
 
 - Because we have two conflicting versions of `BaseGame.ini`:
-  - One in `develop`,
+  - one in `develop`,
   - one in `config`.
 - We will need to express how those two conflicting version will merge:
-  - Will we overwrite the one from `develop`?
+  - Will we overwrite the one from `develop`? (This is called **Rebase**)
   - Will we go step by step and decide which line from `develop` we want to
     keep and which one we want to erase for the version in `config`?
 - You can establish a strategy that should generally applied.
@@ -199,7 +194,16 @@ Now, we have a problem.
 
 ## Git LFS
 
-Git Large File Storage
+Git Large File Storage:
+
+- An open source Git extension for versioning large files
+- This adds a new verb: **track**.
+- This says "I want to keep track of changes over files that are large and/or
+  non textual".
+- Suppose one of you is making drawing in PhotoShop. You will be able to say
+  "let's track all PSD files".
+
+More *[here](https://git-lfs.com/)*.
 
 
 ---
@@ -209,7 +213,17 @@ Git Large File Storage
 - Pushing large changes can use a lot of bandwidth.
 - Temporary files are not necessary to keep the project in good working
   condition.
+- The `.gitignore` file in your repository can list all the files that you
+  want to ignore when committing.
 
+```
+*.obj
+*.exe
+Build/*
+```
+
+You can use a gitignore generator:
+*[gitignore.io](https://www.toptal.com/developers/gitignore)*.
 
 ---
 
@@ -218,3 +232,12 @@ Git Large File Storage
 - Anyone wishing to work in the games industry has to be proficient in Git.
 - If you are not very technical, learn the basics and ask for help for the
   most difficult aspects from your teammates.
+- Always be mindful of the branch you are working on.
+- Before you push, make sure you are not destroying your remote's main branch.
+
+---
+
+## Questions?
+
+- Julien Cordry G0.46b.
+- j.cordry@tees.ac.uk
