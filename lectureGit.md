@@ -26,7 +26,7 @@ Source: atlassian.com
 
 - 1975: **Source Code Control System**, Bell Labs.
 - 1982: Revision Control System (**RCS**), GNU, stores a set of **Deltas**.
-- 1995: Helix Code, **Perforce**, flexibility of tools. Today, wraps around
+- 1995: Helix Core, **Perforce**, flexibility of tools. Today, wraps around
   git.
 - 2000: **Subversion** (SVN), Apache, allows concurrent access to a shared
   repository.
