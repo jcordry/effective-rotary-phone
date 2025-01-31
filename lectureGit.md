@@ -40,7 +40,7 @@ Source: atlassian.com
 
 ---
 
-![source: xkvd](xkvd.jpg)
+![source: xkcd](xkvd.jpg)
 
 ---
 
@@ -48,12 +48,15 @@ Source: atlassian.com
 
 The difference between git and github:
 
-- Git is:
-  - The software that manages the versions of the code.
-  - Open source.
-- Github is:
-  - A website, that offers a popular free **remote** hosting service.
-  - Owned by Microsoft.
+### Git is:
+
+- The software that manages the versions of the code.
+- Open source.
+
+### Github is:
+
+- A website, that offers a popular free **remote** hosting service.
+- Owned by Microsoft.
 
 There are alternatives to Git. There are alternatives to Github.
 
@@ -61,12 +64,13 @@ There are alternatives to Git. There are alternatives to Github.
 
 ## Definitions
 
-- A **repository** (or repo): a central storage location for managing and
+- A **repository** (***repo*** for short): a central storage location for managing and
   tracking changes in files and directories.
 - A **remote**: a common repository that all team members use to exchange
-  their changes.
-- A **commit**: a snapshot or milestone along the timeline of a Git project.
-- A **branch**: a pointer to a snapshot of your changes (a commit).
+  their deltas.
+- A **commit**: a *snapshot* or *milestone* along the timeline of a Git project.
+  - Put together, the commits make a tree-like structure.
+- A **branch**: a *name* pointing to a *commit*.
 
 ---
 
@@ -94,13 +98,13 @@ There are alternatives to Git. There are alternatives to Github.
 
 ---
 
-## The order of the verbs matter
+## The order of the verbs matter 1/2
 
 ![](commands01.png)
 
 ---
 
-## The order of the verbs matter
+## The order of the verbs matter 2/2
 
 ![](commands02.png)
 
@@ -143,14 +147,14 @@ going to change the other branches.
 
 ## A Note
 
-Remember that **to checkout a branch** means to switch to a different branch
-than the one we are currently working on.
+Remember that **to checkout a branch** means: to switch to another branch,
+different to the one we are currently working on.
 
 ### Why do I need a branch?
 
 - You can also **checkout** a **commit**. Commits are identified by a hex
   value.
-- When you do the label to your local working copy of the project, aka
+- When you do, the label to your local working copy of the project, aka
   **`HEAD`**, will move to this commit.
 - We say that the `HEAD` is **detached** if there is no branch currently where
   `HEAD` is.
@@ -212,7 +216,7 @@ More *[here](https://git-lfs.com/)*.
 
 - Pushing large changes can use a lot of bandwidth.
 - Temporary files are not necessary to keep the project in good working
-  condition.
+  condition. E.g.: Photoshop temp files.
 - The `.gitignore` file in your repository can list all the files that you
   want to ignore when committing.
 
