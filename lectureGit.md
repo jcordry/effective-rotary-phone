@@ -196,6 +196,15 @@ Now, we have a problem.
 
 ---
 
+## Gitflow
+
+*[Have a look
+here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)*
+
+![Example gitflow](gitflow.png)
+
+---
+
 ## Git LFS
 
 Git Large File Storage:
