@@ -141,9 +141,6 @@ going to change the other branches.
 - Branching is lightweight and fast.
 
 
-fjklsdhfjksdhkjfshdjkfsdhksdfhk
-kfjlkdsjlkjdflkjsdfklj
-
 # Branch early. Branch frequently.
 
 
