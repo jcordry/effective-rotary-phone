@@ -251,5 +251,6 @@ You can use a gitignore generator:
 
 ## Questions?
 
-- Julien Cordry G0.46b.
-- j.cordry@tees.ac.uk
+- **Tutor:** Julien Cordry
+- **Office:** G0.46b
+- **Email:** [[j.cordry@tees.ac.uk]{.underline}](mailto:j.cordry@tees.ac.uk)
