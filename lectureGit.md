@@ -84,7 +84,6 @@ There are alternatives to Git. There are alternatives to Github.
   3. The merge will be another commit. We then push it so that others can
      access this newer version.
 
-
 ---
 
 ## Verbs
@@ -218,7 +217,6 @@ Git Large File Storage:
   "let's track all PSD files".
 
 More *[here](https://git-lfs.com/)*.
-
 
 ---
 
