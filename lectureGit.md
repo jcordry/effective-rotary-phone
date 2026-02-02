@@ -3,7 +3,7 @@ title: Journeyman
 subtitle: Git and Github
 author: Julien Cordry
 theme: "Antibes"
-colortheme: "beetle"
+colortheme: "whale"
 fonttheme: "structuresmallcapsserif"
 ---
 
@@ -31,13 +31,13 @@ fonttheme: "structuresmallcapsserif"
 
 ## And then...
 
-#### Version control
+### Version control
 
 > Version control, also known as source control, is the practice of tracking
 > and managing changes to software code. Version control systems are software
 > tools that help software teams manage changes to source code over time.
 
-Source: [[atlassian.com]{.underline}](https://atlassian.com)
+Source: [[**atlassian.com**]{.underline}](https://atlassian.com)
 
 ---
 
@@ -76,7 +76,7 @@ The difference between `git` and `github`:
   - Open source.
 - `Github` is:
   - The backend.
-  - A website, that offers a popular free **`remote`** hosting service.
+  - A website, that offers a popular free **`repository`** hosting service.
   - Owned by Microsoft.
 
 There are alternatives to `Git`. There are alternatives to `Github`.
@@ -91,7 +91,7 @@ There are alternatives to `Git`. There are alternatives to `Github`.
   their changes.
 - A **`commit`**: a snapshot or milestone along the timeline of a Git project.
 - A **`branch`**: a pointer to a single snapshot of your changes (a commit) / a
-  label with a name on a `commit`.
+  label with a name attached to a `commit`.
 
 ---
 
@@ -122,39 +122,39 @@ There are alternatives to `Git`. There are alternatives to `Github`.
 
 ---
 
-![Clone remote repo](img/terms02.png)
+![`Clone` `remote` `repo`](img/terms02.png)
 
 ---
 
-![Checkout commit](img/terms03.png)
+![`Checkout` `commit`](img/terms03.png)
 
 ---
 
-![Create branch](img/terms04.png)
+![`Create branch bugFix + checkout bugFix`](img/terms04.png)
 
 ---
 
-![Commit 1](img/terms05.png)
+![`Commit` 1](img/terms05.png)
 
 ---
 
-![Commit 2](img/terms06.png)
+![`Commit` 2](img/terms06.png)
 
 ---
 
-![Push to remote](img/terms07.png)
+![`Push` to `remote/bugFix`](img/terms07.png)
 
 ---
 
-![Checkout main](img/terms08.png)
+![`Checkout` `main`](img/terms08.png)
 
 ---
 
-![Merge bugFix](img/terms09.png)
+![`Merge` `bugFix`](img/terms09.png)
 
 ---
 
-![Push to remote](img/terms10.png)
+![`Push` to `remote/main`](img/terms10.png)
 
 ---
 
@@ -181,7 +181,7 @@ There are alternatives to `Git`. There are alternatives to `Github`.
 4. **`Stage`** the files you want to include in your commit.
 5. **`Commit`** with a useful message. Your changes will be local only.
 6. **`Pull`** the changes others will have done from the remote.
-7. **`Push`** your changes into the remote. You can choose which branch of the 8
+7. **`Push`** your changes into the remote. You can choose which branch of the
    remote this new commit will go into.
 9. Repeat from step 3.
 
@@ -246,7 +246,7 @@ Suppose the following scenario:
   modifying `BaseGame.ini`
 - You've been dutiful. You've committed your changes.
 - Your changes are finished, so you want to merge your changes into a shared
-  branch "`develop`".
+  "`develop`" branch.
 - You **`checkout`** `develop`.
 - You **`pull`** (you get the latest version of `develop`).
 - **HOWEVER**, someone in your team has been modifying `BaseGame.ini` in the
@@ -262,7 +262,7 @@ Now, we have a problem.
   - one in `develop`,
   - one in `config`.
 - We will need to express how those two conflicting versions will merge:
-  - Will we overwrite the one from `develop`? (This is called **`Rebase`**)
+  - Will we overwrite the one from `develop`? (This is called **`rebase`**)
   - Will we go step by step and decide which line from `develop` we want to
     keep and which one we want to erase for the version in `config`?
 - You can establish a strategy that should generally applied.
@@ -286,7 +286,7 @@ Now, we have a problem.
 Git Large File Storage:
 
 - An open source Git extension for versioning large files
-- This adds a new verb: **track**.
+- This adds a new verb: **`track`**.
 - This says "I want to keep track of changes over files that are large and/or
   non textual".
 - Suppose one of you is making drawing in PhotoShop. You will be able to say
@@ -310,7 +310,7 @@ GUI clients:
 
 - GitKraken
 - SourceTree
-- GitHub Desktop
+- **GitHub Desktop**
 
 IDE integration:
 
@@ -326,7 +326,7 @@ IDE integration:
 
 - Pushing large changes can use a lot of bandwidth.
 - Temporary files are not necessary to keep the project in good working
-  condition. E.g.: Photoshop temp files.
+  condition. E.g.: temp files.
 - The `.gitignore` file in your repository can list all the files that you
   want to ignore when committing.
 
@@ -347,12 +347,12 @@ You can use a gitignore generator:
 
 ## Unreal Engine & Version Control
 
-- Unreal projects are **large and asset-heavy**
+- Unreal projects are **large and asset-heavy**.
 - Mix of:
-  - C++ source code
-  - Blueprints
-  - Binary assets (textures, meshes, audio)
-- Version control is **mandatory**, not optional
+  - C++ source code,
+  - Blueprints,
+  - Binary assets (textures, meshes, audio).
+- Version control is **mandatory**, not optional.
 
 **Key challenge:** binaries don't merge like code.
 
