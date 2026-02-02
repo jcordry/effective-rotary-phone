@@ -209,7 +209,7 @@ Suppose the following scenario:
   branch "`develop`".
 - You **`checkout`** `develop`.
 - You **`pull`** (you get the latest version of `develop`).
-- **HOWEVER** someone in your team has been modifying `BaseGame.ini` in the
+- **HOWEVER**, someone in your team has been modifying `BaseGame.ini` in the
   `develop` branch (possibly without telling you).
 
 ---
