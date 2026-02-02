@@ -118,6 +118,46 @@ There are alternatives to `Git`. There are alternatives to `Github`.
 
 ---
 
+![Initial state](img/terms01.png)
+
+---
+
+![Clone remote repo](img/terms02.png)
+
+---
+
+![Checkout commit](img/terms03.png)
+
+---
+
+![Create branch](img/terms04.png)
+
+---
+
+![Commit 1](img/terms05.png)
+
+---
+
+![Commit 2](img/terms06.png)
+
+---
+
+![Push to remote](img/terms07.png)
+
+---
+
+![Checkout main](img/terms08.png)
+
+---
+
+![Merge bugFix](img/terms09.png)
+
+---
+
+![Push to remote](img/terms10.png)
+
+---
+
 ## The order of the verbs matter 1/2
 
 ![](img/commands01.png)
@@ -221,7 +261,7 @@ Now, we have a problem.
 - Because we have two conflicting versions of `BaseGame.ini`:
   - one in `develop`,
   - one in `config`.
-- We will need to express how those two conflicting version will merge:
+- We will need to express how those two conflicting versions will merge:
   - Will we overwrite the one from `develop`? (This is called **`Rebase`**)
   - Will we go step by step and decide which line from `develop` we want to
     keep and which one we want to erase for the version in `config`?
@@ -252,7 +292,7 @@ Git Large File Storage:
 - Suppose one of you is making drawing in PhotoShop. You will be able to say
   "let's track all PSD files".
 
-More [[**here**]{.underline}](https://git-lfs.com/)*.
+More [[**here**]{.underline}](https://git-lfs.com/).
 
 ---
 
@@ -298,12 +338,6 @@ Build/*
 
 You can use a gitignore generator:
 [[**gitignore.io**]{.underline}](https://www.toptal.com/developers/gitignore).
-
----
-
-## Best practice
-
-- Use it from day 1.
 
 ---
 
