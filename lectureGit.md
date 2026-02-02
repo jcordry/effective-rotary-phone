@@ -1,24 +1,43 @@
 ---
-title: Git and github
+title: Journeyman
+subtitle: Git and Github
 author: Julien Cordry
+theme: "Antibes"
+colortheme: "beetle"
+fonttheme: "structuresmallcapsserif"
+---
+
+# Introduction
+
+---
+
+## Today:
+
+- History
+- Definitions
+- Tools
+
+---
+
+# History
+
 ---
 
 ## A long long time ago...
 
-
-![Saving your project as your progress](versions.png)
+![Saving your project as you progress](versions.png)
 
 ---
 
-## And then
+## And then...
 
-### Version control
+#### Version control
 
 > Version control, also known as source control, is the practice of tracking
 > and managing changes to software code. Version control systems are software
 > tools that help software teams manage changes to source code over time.
 
-Source: atlassian.com
+Source: [[atlassian.com]{.underline}](https://atlassian.com)
 
 ---
 
@@ -44,41 +63,43 @@ Source: atlassian.com
 
 ---
 
+# Definitions
+
+---
+
 ## Distinction
 
-The difference between git and github:
+The difference between `git` and `github`:
 
-### Git is:
+- `Git` is:
+  - The software that manages the versions of the code.
+  - Open source.
+- `Github` is:
+  - The backend.
+  - A website, that offers a popular free **`remote`** hosting service.
+  - Owned by Microsoft.
 
-- The software that manages the versions of the code.
-- Open source.
-
-### Github is:
-
-- A website, that offers a popular free **remote** hosting service.
-- Owned by Microsoft.
-
-There are alternatives to Git. There are alternatives to Github.
+There are alternatives to `Git`. There are alternatives to `Github`.
 
 ---
 
 ## Definitions
 
-- A **repository** (***repo*** for short): a central storage location for managing and
+- A **`repository`** (or repo): a central storage location for managing and
   tracking changes in files and directories.
-- A **remote**: a common repository that all team members use to exchange
-  their deltas.
-- A **commit**: a *snapshot* or *milestone* along the timeline of a Git project.
-  - Put together, the commits make a tree-like structure.
-- A **branch**: a *name* pointing to a *commit*.
+- A **`remote`**: a common repository that all team members use to exchange
+  their changes.
+- A **`commit`**: a snapshot or milestone along the timeline of a Git project.
+- A **`branch`**: a pointer to a single snapshot of your changes (a commit) / a
+  label with a name on a `commit`.
 
 ---
 
 ## More definitions
 
-- **Checking out**: switching to a specific branch or commit. Further commits will happen in this
+- **`Checking out`**: switching to a specific branch or commit. Further commits will happen in this
   particular branch (independently from the rest of the development).
-- **Merging**: resolving the differences between two branches:
+- **`Merging`**: resolving the differences between two branches:
   1. Checkout the branch that you want to receive the changes,
   2. You merge the branch that contains the changes.
   3. The merge will be another commit. We then push it so that others can
@@ -88,12 +109,12 @@ There are alternatives to Git. There are alternatives to Github.
 
 ## Verbs
 
-- **clone**: create a local copy from a remote repo.
-- **pull**, **fetch**: get the latest changes from the remote.
-- **push**: share the local changes with the remote.
-- **stage**, **add**: make a list of files to be committed.
-- **commit**: make a snapshot of the current project. Requires a comment.
-  E.g.: "level 10, final version"
+- **`clone`**: create a local copy from a remote repo.
+- **`pull`**, **`fetch`**: get the latest changes from the remote.
+- **`push`**: share the local changes with the remote.
+- **`stage`**, **`add`**: make a list of files to be committed.
+- **`commit`**: make a snapshot of the current project. Requires a written
+  comment.  E.g.: "level 10, final version"
 
 ---
 
@@ -111,26 +132,32 @@ There are alternatives to Git. There are alternatives to Github.
 
 ##  Typical workflow
 
-1. **Clone** the project from a remote. This gives us a local working copy of
+1. **`Clone`** the project from a remote. This gives us a local working copy of
    the project. You only need to do that if you don't already have a local
    working copy of the project.
-2. **Checkout** a branch and **pull** all the data from the remote or create a
+2. **`Checkout`** a branch and **`pull`** all the data from the remote or create a
    new one.
 3. Start your work on it. I.e.: add some files or modify existing files.
-4. **Stage** the files you want to include in your commit.
-5. **Commit** with a useful message. Your changes will be local only.
-6. **Pull** the changes others will have done from the remote.
-7. **Push** your changes into the remote. You can choose which branch of the
+4. **`Stage`** the files you want to include in your commit.
+5. **`Commit`** with a useful message. Your changes will be local only.
+6. **`Pull`** the changes others will have done from the remote.
+7. **`Push`** your changes into the remote. You can choose which branch of the 8
    remote this new commit will go into.
-9. Repeat from step 2.
+9. Repeat from step 3.
+
+---
+
+# Branching
+
+---
 
 ## Why would you want to branch?
 
-A branch is nothing more than a label over a commit. It evolves independently
-from the rest of the development. I.e.: making commits over this branch is not
+A branch is nothing more than a label over a `commit`. It evolves independently
+from the rest of the development. I.e.: making `commits` over this branch is not
 going to change the other branches.
 
-### Why it's great:
+#### Why it's great:
 
 - Keep your working project clean. Don't add mess to a complex project.
 - Experiment on the side, either on your own personal branch, or just with a
@@ -139,9 +166,11 @@ going to change the other branches.
 - Keep track of your releases.
 - Branching is lightweight and fast.
 
+---
 
-# Branch early. Branch frequently.
+## What to do?
 
+***Branch early. Branch frequently.***
 
 ---
 
@@ -150,9 +179,9 @@ going to change the other branches.
 Remember that **to checkout a branch** means: to switch to another branch,
 different to the one we are currently working on.
 
-### Why do I need a branch?
+#### Why do I need a branch?
 
-- You can also **checkout** a **commit**. Commits are identified by a hex
+- You can also **`checkout`** a **`commit`**. Commits are identified by a hex
   value.
 - When you do, the label to your local working copy of the project, aka
   **`HEAD`**, will move to this commit.
@@ -161,7 +190,11 @@ different to the one we are currently working on.
 - If you then make more commits, those commits will be difficult to identify
   and get to, because there is no branch there.
 
-# Don't detach your `HEAD`.
+---
+
+## What not to do
+
+***Don't detach your `HEAD`.***
 
 ---
 
@@ -174,8 +207,8 @@ Suppose the following scenario:
 - You've been dutiful. You've committed your changes.
 - Your changes are finished, so you want to merge your changes into a shared
   branch "`develop`".
-- You **checkout** `develop`.
-- You **pull** (you get the latest version of `develop`).
+- You **`checkout`** `develop`.
+- You **`pull`** (you get the latest version of `develop`).
 - **HOWEVER** someone in your team has been modifying `BaseGame.ini` in the
   `develop` branch (possibly without telling you).
 
@@ -189,17 +222,20 @@ Now, we have a problem.
   - one in `develop`,
   - one in `config`.
 - We will need to express how those two conflicting version will merge:
-  - Will we overwrite the one from `develop`? (This is called **Rebase**)
+  - Will we overwrite the one from `develop`? (This is called **`Rebase`**)
   - Will we go step by step and decide which line from `develop` we want to
     keep and which one we want to erase for the version in `config`?
 - You can establish a strategy that should generally applied.
 
 ---
 
+# Tools
+
+---
+
 ## Gitflow
 
-*[Have a look
-here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)*
+[[**Have a look here**]{.underline}](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 ![Example gitflow](gitflow.png)
 
@@ -216,7 +252,7 @@ Git Large File Storage:
 - Suppose one of you is making drawing in PhotoShop. You will be able to say
   "let's track all PSD files".
 
-More *[here](https://git-lfs.com/)*.
+More [[**here**]{.underline}](https://git-lfs.com/)*.
 
 ---
 
@@ -235,11 +271,15 @@ Build/*
 ```
 
 You can use a gitignore generator:
-*[gitignore.io](https://www.toptal.com/developers/gitignore)*.
+[[**gitignore.io**]{.underline}](https://www.toptal.com/developers/gitignore).
 
 ---
 
-## Conclusion
+# Conclusion
+
+---
+
+## To summarise
 
 - Anyone wishing to work in the games industry has to be proficient in Git.
 - If you are not very technical, learn the basics and ask for help for the
@@ -249,8 +289,22 @@ You can use a gitignore generator:
 
 ---
 
-## Questions?
+## Today, we discussed
 
-- **Tutor:** Julien Cordry
-- **Office:** G0.46b
-- **Email:** [[j.cordry@tees.ac.uk]{.underline}](mailto:j.cordry@tees.ac.uk)
+Git:
+
+- History
+- Definitions
+- Tools
+
+---
+
+## Any questions?
+
+**Tutor**: Julien Cordry
+
+**Email**: **[[j.cordry@tees.ac.uk]{.underline}](mailto:j.cordry@tees.ac.uk)**
+
+**Office**: G0.46B
+
+See Blackboard for online materials: **[[https://bb.tees.ac.uk]{.underline}](https://bb.tees.ac.uk)**
