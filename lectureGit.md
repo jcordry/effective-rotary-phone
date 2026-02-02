@@ -25,7 +25,7 @@ fonttheme: "structuresmallcapsserif"
 
 ## A long long time ago...
 
-![Saving your project as you progress](versions.png)
+![Saving your project as you progress](img/versions.png)
 
 ---
 
@@ -55,11 +55,11 @@ Source: [[atlassian.com]{.underline}](https://atlassian.com)
 
 ## Git
 
-![Git](Git-logo.png)
+![Git](img/Git-logo.png)
 
 ---
 
-![source: xkcd](xkvd.jpg)
+![source: xkcd](img/xkvd.jpg)
 
 ---
 
@@ -120,13 +120,13 @@ There are alternatives to `Git`. There are alternatives to `Github`.
 
 ## The order of the verbs matter 1/2
 
-![](commands01.png)
+![](img/commands01.png)
 
 ---
 
 ## The order of the verbs matter 2/2
 
-![](commands02.png)
+![](img/commands02.png)
 
 ---
 
@@ -237,7 +237,7 @@ Now, we have a problem.
 
 [[**Have a look here**]{.underline}](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
-![Example gitflow](gitflow.png)
+![Example gitflow](img/gitflow.png)
 
 ---
 
@@ -253,6 +253,32 @@ Git Large File Storage:
   "let's track all PSD files".
 
 More [[**here**]{.underline}](https://git-lfs.com/)*.
+
+---
+
+## Remote hosting
+
+- [[**Github**]{.underline}](https://github.com)
+- [[**Gitlab**]{.underline}](https://about.gitlab.com/)
+- [[**Bitbucket**]{.underline}](https://bitbucket.org/product/)
+
+---
+
+## Visual & Productivity Tools
+
+GUI clients:
+
+- GitKraken
+- SourceTree
+- GitHub Desktop
+
+IDE integration:
+
+- VS Code
+- JetBrains Rider
+- Visual Studio
+
+*Benefit:* see branches, merges, conflicts visually.
 
 ---
 
@@ -275,6 +301,143 @@ You can use a gitignore generator:
 
 ---
 
+## Best practice
+
+- Use it from day 1.
+
+---
+
+# Unreal
+
+---
+
+## Unreal Engine & Version Control
+
+- Unreal projects are **large and asset-heavy**
+- Mix of:
+  - C++ source code
+  - Blueprints
+  - Binary assets (textures, meshes, audio)
+- Version control is **mandatory**, not optional
+
+**Key challenge:** binaries don't merge like code.
+
+---
+
+## Unreal Project Structure (Git-Relevant)
+
+Common folders:
+
+- `Source/`: C++ code (**track with Git**).
+- `Content/`: Assets & Blueprints (**track with Git LFS**).
+- `Config/`: Project settings (**track with Git**).
+
+Do **NOT** track:
+
+- `Binaries/`
+- `DerivedDataCache/`
+- `Intermediate/`
+- `Saved/`
+
+---
+
+## `.gitignore` for Unreal
+
+Typical Unreal `.gitignore` excludes:
+
+- Build outputs.
+- Cached data.
+- Temporary files.
+
+**Why:**
+
+- Reduces repo size.
+- Avoids conflicts.
+- Speeds up cloning.
+
+Unreal + Git works best with a **clean ignore file**.
+
+---
+
+## Git LFS for Unreal Assets
+
+Why Git LFS?
+
+- Unreal assets are often:
+  - `.uasset`.
+  - `.umap`.
+  - Large binaries.
+
+Git LFS:
+
+- Stores large files outside normal Git history.
+- Keeps repo fast and usable.
+
+**Standard practice in Unreal projects.**
+
+---
+
+## Branching Strategy for Unreal Teams
+
+Common setup:
+
+- `main` / `release`: stable game.
+- `develop`: integration branch.
+- `feature/*`: new mechanics, levels.
+- `hotfix/*`: urgent bug fixes.
+
+**Rule:**
+Never experiment directly on `main`.
+
+---
+
+## Working with Blueprints
+
+- Blueprints are binary files.
+- Cannot be merged line-by-line.
+- Causes conflicts if edited by multiple people.
+
+Best practices:
+
+- One owner per Blueprint.
+- Split logic into smaller Blueprints.
+- Communicate before editing shared assets.
+
+---
+
+## Unreal Editor + Git
+
+- Unreal Editor detects Git repositories.
+- Can:
+  - Show file status.
+  - Submit changes.
+- Limited conflict resolution.
+
+**Recommendation:**
+Use Unreal Editor + external Git client together.
+
+---
+
+## Common Unreal + Git Mistakes
+
+- Forgetting Git LFS.
+- Committing `DerivedDataCache`.
+- Letting multiple people edit the same Blueprint.
+- Huge commits with unrelated changes.
+
+**Fix:** discipline + workflow rules.
+
+---
+
+## Unreal + Git: Key Takeaways
+
+- Git works well with Unreal **if configured correctly**.
+- Git LFS is essential.
+- Structure and communication matter more than tools.
+- Version control saves *months* of work.
+
+---
+
 # Conclusion
 
 ---
@@ -282,6 +445,9 @@ You can use a gitignore generator:
 ## To summarise
 
 - Anyone wishing to work in the games industry has to be proficient in Git.
+- It is used by Indie studios as by AAA.
+- In games:
+  - Git + LFS + hosting platform = standard setup
 - If you are not very technical, learn the basics and ask for help for the
   most difficult aspects from your teammates.
 - Always be mindful of the branch you are working on.
