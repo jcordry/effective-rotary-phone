@@ -75,6 +75,7 @@ The difference between `git` and `github`:
   - The software that manages the versions of the code.
   - Open source.
 - `Github` is:
+  - The backend.
   - A website, that offers a popular free **`remote`** hosting service.
   - Owned by Microsoft.
 
